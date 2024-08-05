@@ -14,36 +14,36 @@ This workshop is all about unit testing! Here's a glimpse of what you'll be achi
 
 Time to dive into action! 🏊‍♂️ Here's what you'll be working on:
 
-### 🎫 Ticket 1 - Installing Vitest
+### 🎫 Ticket 1 - Installing Vitest ✅
 
 Your manager wants you to install and set up Vitest in the `proof-of-concept` project so the team can start writing automated tests. There are no other details provided and your manager is currently unavailable to ask questions. You and your team need to figure things out on your own for now.
 
 Below is how you've started to break the problem down so far:
 
-- `cd` into the `proof-of-concept` project
+- `cd` into the `proof-of-concept` project ✅
   - Why: If you don't `cd` into the subfolder first, then by default you'll install NPM packages to your current working directory, which probably isn't the right place.
-- Install Vitest as a dev dependency
+- Install Vitest as a dev dependency ✅
 
   - Vitest is a third party package to help write tests. Since it's only needed during development/testing, install it as a dev dependency (rather than a regular dependency).
   - If you're stuck on how to install it, search online for their documentation and try to find a "getting started" guide.
 
-- After installing Vitest, check if you can run it.
+- After installing Vitest, check if you can run it. ✅
 
   - Why: Running Vitest, even without tests written yet, verifies that it is installed correctly and ready for you to start writing actual tests. Since you don't currently have any tests, you'd expect at this stage for the terminal to display something like "no tests found" or anything else that lets you know that Vitest ran.
   - If you're stuck on how to run/execute Vitest, search online for their documentation.
 
-### 🎫 Ticket 2 - Writing a basic test skeleton
+### 🎫 Ticket 2 - Writing a basic test skeleton ✅
 
 Great work getting Vitest installed and running in the `proof-of-concept` project! The team is excited to start adding test automation.
 
 Your next task is to write the minimum amount of code needed to create and run a test. Your manager is still unavailable to ask for further clarification, but this is how you've started to break the task down so far:
 
-- Within the `proof-of-concept` project, create a file called `bare-bones.test.js` .
+- Within the `proof-of-concept` project, create a file called `bare-bones.test.js` . ✅
   - Why: This creates a file within which you can put your tests. Ending the file with `test.js` lets Vitest know that this JavaScript file contains tests for it to run.
-- Inside the `bare-bones.test.js` file, import `test` from `vitest`
+- Inside the `bare-bones.test.js` file, import `test` from `vitest` ✅
   - Why: `test` is a function located within the Vitest package. It allows you to define test cases.
   - If you're stuck on how to import `test` from Vitest, look for examples online or in their documentation.
-- Call `test` to define a new test named `"bare bones test should pass"` that doesn't do anything yet.
+- Call `test` to define a new test named `"bare bones test should pass"` that doesn't do anything yet. ✅
 
   - Why: Calling `test()` with correct arguments registers a new test.
   - If you're stuck on how to use/call `test`, look for examples online or in Vitest documentation.
@@ -66,9 +66,9 @@ function sum(first, second) {
 
 The only information in the ticket is that `expect` is a function from Vitest that can be used to create assertions. Unfortunately your manager is currently tied up in a meeting and not available for further clarification. Looks like you and your team will need to try to progress on your own for now. Below is how you've started to break down the task:
 
-- Within the `proof-of-concept` project, create a `sum.js` file. Within the file, declare and export the above `sum` function.
+- Within the `proof-of-concept` project, create a `sum.js` file. Within the file, declare and export the above `sum` function. ✅
   - Why: This is the application code that you're testing and typically it will be in a separate file. In this case it's a function that adds two numbers, but it could just as well be a more complex function that performs some logic and returns some value.
-- Within the `proof-of-concept` project, create a `sum.test.js`. Within `sum.test.js` plan out what you need for the test and what steps you need to take in the test. Here's an example plan you made earlier, but feel free to rewrite it.
+- Within the `proof-of-concept` project, create a `sum.test.js`. Within `sum.test.js` plan out what you need for the test and what steps you need to take in the test. Here's an example plan you made earlier, but feel free to rewrite it. ✅
 
   ```js
   //  import `test` and `expect` functions from Vitest
@@ -88,8 +88,8 @@ Your manager has come out of the meeting and is elated to learn of your team's p
 
 Your manager has tasked your team with the following:
 
-- Set up and install Vitest within the `calculator` project
-- Spend time reading `calculator.js` and getting familiar with how the code is meant to work
+- Set up and install Vitest within the `calculator` project ✅
+- Spend time reading `calculator.js` and getting familiar with how the code is meant to work ✅
 - Plan and write test cases/scenarios for the `calculate` function.
 - Your tests should call the function with arguments and assert that the value returned is correct.
 - There should also be at least one test that asserts that `calculate` throws an error when called with an unsupported operator.
