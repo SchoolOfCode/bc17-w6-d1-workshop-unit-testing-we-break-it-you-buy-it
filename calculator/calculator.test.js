@@ -11,3 +11,8 @@ test("adds 9 + 10 to equal 19", () => {
 test("adds 10 - 9 to equal 1", () => {
     expect(calculate("-", 10, 9)).toBe(1);
 });
+
+// test multiplication
+// test division
+// test squaring
+// test throwing an error for an unsupported operator
