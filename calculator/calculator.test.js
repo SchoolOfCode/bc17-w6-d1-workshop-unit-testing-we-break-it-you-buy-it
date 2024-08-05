@@ -25,4 +25,11 @@ test("divides 12 by 2 to equal 6", () => {
 
 
 // test squaring
+test("squares 13 to equal 169", () => {
+    expect(calculate("sq", 13, 2)).toBe(169);
+});
+
 // test throwing an error for an unsupported operator
+test("expect an error with an unsupported operator", () => {
+    expect(calculate("&", 10, 2)).toThrowError('operator');
+});
