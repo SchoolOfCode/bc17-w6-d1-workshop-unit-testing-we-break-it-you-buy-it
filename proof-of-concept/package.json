@@ -1,7 +1,9 @@
 {
   "private": true,
   "version": "0.0.0",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "vitest": "^2.0.5"
+  },
+  "type": "module"
 }
