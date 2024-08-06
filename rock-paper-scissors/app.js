@@ -48,13 +48,13 @@ export function calculateRoundResult(playerMove, computerMove) {
       message: "Both players chose scissors. It's a draw.",
     };
   }
-  if (playerMove === "ROCK" && computerMove === SCISSORS) {
+  if (playerMove === ROCK && computerMove === SCISSORS) {
     return {
       outcome: WIN,
-      message: "Player chose rock and computer chose paper. Player wins.",
+      message: "Player chose rock and computer chose scissors. Player wins.",
     };
   }
-  if ((playerMove = PAPER && computerMove === "rrock")) {
+  if ((playerMove === PAPER && computerMove === ROCK)) {
     return {
       outcome: WIN,
       message: "Player chose paper and computer chose rock. Player wins.",
@@ -78,10 +78,10 @@ export function calculateRoundResult(playerMove, computerMove) {
       message: "Player chose scissors and computer chose rock. Computer wins.",
     };
   }
-  if (playerMove === "scissors" && computerMove === "paper") {
+  if (playerMove === SCISSORS && computerMove === PAPER) {
     return {
       outcome: WIN,
-      message: "Player chose paper and computer chose paper. Player wins.",
+      message: "Player chose scissors and computer chose paper. Player wins.",
     };
   }
   throw new Error(
