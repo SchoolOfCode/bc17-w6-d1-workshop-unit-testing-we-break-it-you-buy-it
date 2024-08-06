@@ -30,16 +30,17 @@ export const DRAW = "draw",
  * If either of the human move or computer move is unsupported/invalid, then an error should be thrown.
  */
 export function calculateRoundResult(playerMove, computerMove) {
-  if (ROCK === playerMove && ROCK === computerMove) {
-    return { 
-      outcome: DRAW, 
-      message: "Both players chose rock. It's a draw." 
+  // DRAWS
+  if (playerMove === ROCK && ROCK === computerMove) {
+    return {
+      outcome: DRAW,
+      message: "Both players chose rock. It's a draw.",
     };
   }
   if (playerMove === PAPER && computerMove === PAPER) {
-    return { 
-      outcome: DRAW, 
-      message: "Both players chose paper. It's a draw." 
+    return {
+      outcome: DRAW,
+      message: "Both players chose paper. It's a draw.",
     };
   }
   if (playerMove === SCISSORS && computerMove === SCISSORS) {
@@ -48,25 +49,27 @@ export function calculateRoundResult(playerMove, computerMove) {
       message: "Both players chose scissors. It's a draw.",
     };
   }
+  // WINS
   if (playerMove === ROCK && computerMove === SCISSORS) {
     return {
       outcome: WIN,
       message: "Player chose rock and computer chose scissors. Player wins.",
     };
   }
-  if ((playerMove === PAPER && computerMove === ROCK)) {
+  if (playerMove === PAPER && computerMove === ROCK) {
     return {
       outcome: WIN,
       message: "Player chose paper and computer chose rock. Player wins.",
     };
   }
-  if (PAPER === playerMove && SCISSORS) {
+  if (playerMove === SCISSORS && computerMove === PAPER) {
     return {
-      outcome: DRAW,
-      message: "Both players chose scissors. It's a draw.",
+      outcome: WIN,
+      message: "Player chose scissors and computer chose paper. Player wins.",
     };
   }
-  if (playerMove === "Paper" && computerMove === SCISSORS) {
+  // LOSSES
+  if (playerMove === PAPER && computerMove === SCISSORS) {
     return {
       outcome: LOSS,
       message: "Player chose paper and computer chose scissors. Computer wins.",
@@ -78,12 +81,13 @@ export function calculateRoundResult(playerMove, computerMove) {
       message: "Player chose scissors and computer chose rock. Computer wins.",
     };
   }
-  if (playerMove === SCISSORS && computerMove === PAPER) {
+  if (playerMove === ROCK && computerMove === PAPER) {
     return {
-      outcome: WIN,
-      message: "Player chose scissors and computer chose paper. Player wins.",
+      outcome: LOSS,
+      message: "Player chose rock and computer chose paper. Computer wins.",
     };
   }
+  // CATCH ERROR
   throw new Error(
     `Invalid player move (${playerMove}) or computer move ${computerMove}`
   );
